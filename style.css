@@ -1787,7 +1787,7 @@ section {
 @media (max-width: 992px) {
     .configurator-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 24px;
     }
     
     .configurator-visual-container {
@@ -1798,25 +1798,48 @@ section {
     .configurator-visual-wrapper {
         height: 280px;
     }
+    
+    .configurator-controls {
+        gap: 24px;
+    }
 }
 
 @media (max-width: 480px) {
+    .configurator-grid {
+        gap: 16px;
+    }
+    .configurator-controls {
+        gap: 16px;
+    }
     .configurator-visual-wrapper {
-        height: 200px;
+        height: 180px;
         border-radius: 16px;
     }
     .spec-panel {
-        padding: 20px;
+        padding: 16px;
     }
     .spec-stats {
-        grid-template-columns: 1fr;
-        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    .spec-stat-card {
+        padding: 8px 4px;
+    }
+    .spec-stat-card strong {
+        font-size: 11px;
+    }
+    .stat-meta {
+        font-size: 8px;
     }
     .swatches-grid {
-        gap: 12px;
+        gap: 10px;
     }
     .swatch-btn {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
+    }
+    .swatch-btn.active::after {
+        width: 6px;
+        height: 6px;
     }
 }
