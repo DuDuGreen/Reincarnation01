@@ -207,53 +207,51 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: formData
             })
             .then(response => {
-                // If Hostinger hosting handles PHP mailer, it sends JSON
-                // If it fails or is served locally without PHP engine running, fall back to showing local success
-                return response.json().catch(() => {
-                    // Fail-safe: if response is not JSON (like plain PHP errors or server missing)
-                    return { success: true, message: "Locally processed request." };
-                });
+                if (!response.ok) {
+                    return response.json().then(errData => {
+                        throw new Error(errData.message || 'Server error occurred.');
+                    }).catch(() => {
+                        throw new Error('Server connection failed (Status ' + response.status + ').');
+                    });
+                }
+                return response.json();
             })
             .then(data => {
-                // Populate Modal details
-                modalUserName.innerText = bookingDetails.fullName;
-                modalCarModel.innerText = bookingDetails.carModel;
-                modalService.innerText = bookingDetails.serviceType;
-                
-                // Format Date nicely: e.g. 2026-06-01 to 01-Jun-2026
-                const dateParts = bookingDetails.bookingDate.split('-');
-                if (dateParts.length === 3) {
-                    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-                    const day = dateParts[2];
-                    const month = months[parseInt(dateParts[1]) - 1];
-                    const year = dateParts[0];
-                    modalDate.innerText = `${day}-${month}-${year}`;
-                } else {
-                    modalDate.innerText = bookingDetails.bookingDate;
-                }
-                
-                modalSlot.innerText = bookingDetails.timeSlot;
-                modalPhone.innerText = bookingDetails.phone;
+                if (data && data.success) {
+                    // Populate Modal details
+                    modalUserName.innerText = bookingDetails.fullName;
+                    modalCarModel.innerText = bookingDetails.carModel;
+                    modalService.innerText = bookingDetails.serviceType;
+                    
+                    // Format Date nicely: e.g. 2026-06-01 to 01-Jun-2026
+                    const dateParts = bookingDetails.bookingDate.split('-');
+                    if (dateParts.length === 3) {
+                        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                        const day = dateParts[2];
+                        const month = months[parseInt(dateParts[1]) - 1];
+                        const year = dateParts[0];
+                        modalDate.innerText = `${day}-${month}-${year}`;
+                    } else {
+                        modalDate.innerText = bookingDetails.bookingDate;
+                    }
+                    
+                    modalSlot.innerText = bookingDetails.timeSlot;
+                    modalPhone.innerText = bookingDetails.phone;
 
-                // Show Success Modal
-                successModal.classList.add('active');
-                
-                // Reset Form
-                form.reset();
+                    // Show Success Modal
+                    successModal.classList.add('active');
+                    
+                    // Reset Form
+                    form.reset();
+                } else {
+                    throw new Error((data && data.message) || 'Booking submission failed.');
+                }
             })
             .catch(error => {
                 console.error("Booking Error:", error);
                 
-                // Fallback local success even if HTTP request failed completely (e.g. running offline)
-                modalUserName.innerText = bookingDetails.fullName;
-                modalCarModel.innerText = bookingDetails.carModel;
-                modalService.innerText = bookingDetails.serviceType;
-                modalDate.innerText = bookingDetails.bookingDate;
-                modalSlot.innerText = bookingDetails.timeSlot;
-                modalPhone.innerText = bookingDetails.phone;
-                
-                successModal.classList.add('active');
-                form.reset();
+                // Strictly show error alert instead of success screen when booking fails
+                alert(`Booking Failed: ${error.message}\n\nPlease try again or contact us directly on WhatsApp (+91 98950 12345) to book your slot!`);
             })
             .finally(() => {
                 // Restore button states
