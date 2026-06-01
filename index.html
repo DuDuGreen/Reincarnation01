@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reincarnation Car Workshop in Karunagappally, Kerala. Premium car detailing, ceramic coating, paint protection film (PPF), vinyl wrapping, performance tuning, and professional servicing.">
+    <title>Reincarnation | Premium Car Detailing & Workshop | Karunagappally, Kerala</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="assets/images/logo_monogram_dark.png" alt="RCN Logo" class="logo-icon">
+                <img src="assets/images/logo_wordmark.png" alt="Reincarnation Wordmark" class="logo-wordmark">
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#booking" class="nav-link">Book Appointment</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="tel:+919895012345" class="nav-phone">
+                    <i data-lucide="phone"></i>
+                    <span>+91 98950 12345</span>
+                </a>
+                <a href="#booking" class="btn btn-primary nav-cta">Book Now</a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero" style="background-image: linear-gradient(rgba(10, 10, 12, 0.4), rgba(10, 10, 12, 0.95)), url('assets/images/hero_car.png');">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    <span>Kerala's Premium Detailing & Tuning Workshop</span>
+                </div>
+                <h1 class="hero-title">WE <span class="highlight">REINCARNATE</span> YOUR RIDE</h1>
+                <p class="hero-subtitle">Give your car a second life. From showroom-level ceramic coatings and paint protection film (PPF) to professional diagnostics and custom performance tuning. Located in Karunagappally.</p>
+                <div class="hero-actions">
+                    <a href="#booking" class="btn btn-primary btn-lg">
+                        <span>Book Appointment</span>
+                        <i data-lucide="calendar"></i>
+                    </a>
+                    <a href="#services" class="btn btn-outline btn-lg">
+                        <span>Our Services</span>
+                        <i data-lucide="chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hero Wave Divider -->
+        <div class="hero-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,8.75,57.05,18.3,88.43,26.85,154.06,44.76,242.11,61.73,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Stats Ticker Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="1500">1500+</h3>
+                    <p class="stat-label">Cars Restored & Detailed</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="99">99.4%</h3>
+                    <p class="stat-label">Customer Satisfaction</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="10">10+</h3>
+                    <p class="stat-label">Years of Auto Excellence</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-card">
+                    <h3 class="stat-number">5-Star</h3>
+                    <p class="stat-label">Rated Detailing Studio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our Premium Services</h2>
+                <p class="section-subtitle">Combining cutting-edge tools, premium global products, and craftsman-level dedication to treat your vehicle to the best.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3 class="service-name">Paint Protection Film (PPF)</h3>
+                    <p class="service-desc">Ultra-durable, self-healing urethane shield that safeguards your vehicle's factory paint against scratches, rock chips, bird droppings, and UV fade.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Self-Healing Technology</li>
+                        <li><i data-lucide="check"></i> 5 to 10 Year Warranty</li>
+                        <li><i data-lucide="check"></i> High-Gloss or Matte Finishes</li>
+                    </ul>
+                    <a href="#booking" class="service-link"><span>Book PPF Treatment</span> <i data-lucide="arrow-right"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <h3 class="service-name">Ceramic & Graphene Coating</h3>
+                    <p class="service-desc">Multi-layered 9H nano-ceramic liquid glass for deep optical clarity, extreme water repellency (hydrophobic), and persistent shield from harsh chemicals.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> 9H Hardness Protection</li>
+                        <li><i data-lucide="check"></i> Intense Hydrophobic Gloss</li>
+                        <li><i data-lucide="check"></i> Paint Correction Included</li>
+                    </ul>
+                    <a href="#booking" class="service-link"><span>Book Coating</span> <i data-lucide="arrow-right"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="service-name">Custom Car Wrapping</h3>
+                    <p class="service-desc">Transform the look of your vehicle with premium aesthetic vinyl wraps. Available in satin, matte, chrome, gloss, and color-shifting textures.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Full or Partial Wraps</li>
+                        <li><i data-lucide="check"></i> Premium Imported Vinyls</li>
+                        <li><i data-lucide="check"></i> Removable, Paint-Safe</li>
+                    </ul>
+                    <a href="#booking" class="service-link"><span>Book Wrap Consultation</span> <i data-lucide="arrow-right"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <i data-lucide="wrench"></i>
+                    </div>
+                    <h3 class="service-name">Premium Auto Detailing</h3>
+                    <p class="service-desc">Multi-stage paint correction polish, interior deep steam cleaning, leather restoration, alloy wheel coating, and meticulous engine bay wash.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Deep Interior Sanitization</li>
+                        <li><i data-lucide="check"></i> Paint Decontamination</li>
+                        <li><i data-lucide="check"></i> Leather & Trim Dressing</li>
+                    </ul>
+                    <a href="#booking" class="service-link"><span>Book Detailing</span> <i data-lucide="arrow-right"></i></a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <i data-lucide="gauge"></i>
+                    </div>
+                    <h3 class="service-name">Performance & Exhausts</h3>
+                    <p class="service-desc">Unlock your engine's true potential with Stage 1/2 ECU Remaps, custom exhaust sound upgrades, sport suspension installations, and brake tuning.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> Certified ECU Remapping</li>
+                        <li><i data-lucide="check"></i> Valvetronic Exhaust Systems</li>
+                        <li><i data-lucide="check"></i> Suspension & Brake Upgrades</li>
+                    </ul>
+                    <a href="#booking" class="service-link"><span>Book Performance</span> <i data-lucide="arrow-right"></i></a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon-box">
+                        <i data-lucide="cog"></i>
+                    </div>
+                    <h3 class="service-name">Mechanical & Diagnostics</h3>
+                    <p class="service-desc">Complete vehicle health scanning, high-end mechanical repairs, suspension repairs, transmission servicing, AC system servicing, and genuine spares.</p>
+                    <ul class="service-features">
+                        <li><i data-lucide="check"></i> O.E.M Level Diagnostics</li>
+                        <li><i data-lucide="check"></i> Genuine Factory Spares</li>
+                        <li><i data-lucide="check"></i> Certified Master Technicians</li>
+                    </ul>
+                    <a href="#booking" class="service-link"><span>Book Repair</span> <i data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Column 1: Details -->
+                <div class="about-content">
+                    <span class="section-tag">About Reincarnation</span>
+                    <h2 class="section-title">The Auto Revival Sanctuary</h2>
+                    <p class="about-text">At <strong>Reincarnation</strong>, we believe every automobile deserves a second life. Our facility is engineered for automotive perfection. We combine high-end technology, imported detailing compounds, and a deep-seated passion for motorsports to deliver finishes that exceed showroom quality.</p>
+                    
+                    <p class="about-text">Whether it's restoring a vintage classic, wrapping a sports car in a bespoke matte color, protecting your brand-new SUV with durable self-healing PPF, or re-tuning a motor for raw track performance, our certified specialists execute each project with surgical precision.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                            <div class="contact-info">
+                                <h4>Our Location</h4>
+                                <p>Reincarnation Car Workshop, Near Kayamkulam - Karunagappally Rd, Karunagappally, Kerala 690518</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i data-lucide="clock"></i></div>
+                            <div class="contact-info">
+                                <h4>Working Hours</h4>
+                                <p>Monday – Saturday: 09:00 AM – 07:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i data-lucide="mail"></i></div>
+                            <div class="contact-info">
+                                <h4>Email & Socials</h4>
+                                <p>bookings@reincarnation.in | @reincarnation_garage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Map & Direction card -->
+                <div class="about-map-box">
+                    <div class="map-card-glow"></div>
+                    <div class="map-card">
+                        <div class="map-header">
+                            <div class="map-title-box">
+                                <i data-lucide="navigation"></i>
+                                <span>Find Us in Karunagappally</span>
+                            </div>
+                            <span class="map-badge">Near Kayamkulam Rd</span>
+                        </div>
+                        <!-- Embedded Google Map centered on 9.0806196, 76.5299638 -->
+                        <div class="map-iframe-container">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=9.0806196,76.5299638&z=15&hl=en&output=embed" 
+                                width="100%" 
+                                height="320" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        <div class="map-footer">
+                            <a href="https://maps.app.goo.gl/S7kX5hnrunMcCaXy7" target="_blank" rel="noopener" class="btn btn-primary btn-block">
+                                <i data-lucide="map"></i>
+                                <span>Get Directions on Google Maps</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="booking">
+        <div class="booking-bg-glow"></div>
+        <div class="container">
+            <div class="booking-grid">
+                <!-- Info Column -->
+                <div class="booking-info">
+                    <span class="section-tag">Easy Booking</span>
+                    <h2 class="section-title">Schedule a Premium Service</h2>
+                    <p class="booking-desc">Book your slot online in less than a minute. Our team will contact you within 2 business hours to confirm your appointment, discuss requirements, and arrange vehicle pick-up if needed.</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i data-lucide="car"></i>
+                            <div>
+                                <h5>Hassle-Free Pick & Drop</h5>
+                                <p>Complimentary pick-up & delivery service within Karunagappally limits.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="badge-percent"></i>
+                            <div>
+                                <h5>Transparent Estimates</h5>
+                                <p>Clear estimates before we begin. No hidden charges or surprise invoices.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i data-lucide="message-square"></i>
+                            <div>
+                                <h5>Instant WhatsApp Support</h5>
+                                <p>Need a quick quote? Chat with our experts directly for advice.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/919895012345?text=Hi%20Reincarnation%2C%20I%20want%20to%20inquire%20about%20a%20service%20for%20my%20car." target="_blank" rel="noopener" class="whatsapp-btn">
+                        <i data-lucide="message-circle" class="wa-icon"></i>
+                        <span>Chat on WhatsApp (+91 98950 12345)</span>
+                    </a>
+                </div>
+
+                <!-- Form Column -->
+                <div class="booking-form-card">
+                    <h3 class="form-title">Request Appointment</h3>
+                    <p class="form-subtitle">Fill in the details below to book your session.</p>
+                    
+                    <form id="appointment-form" action="submit_booking.php" method="POST">
+                        <div class="form-group">
+                            <label for="full_name">Full Name *</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="user"></i>
+                                <input type="text" id="full_name" name="full_name" placeholder="e.g., Arjun Nair" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <div class="input-wrapper">
+                                    <span class="phone-prefix">+91</span>
+                                    <input type="tel" id="phone" name="phone" placeholder="98765 43210" required pattern="^[6-9]\d{9}$" title="Please enter a valid 10-digit Indian mobile number starting with 6, 7, 8 or 9">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="car_model">Car Make & Model *</label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="car-front"></i>
+                                    <input type="text" id="car_model" name="car_model" placeholder="e.g., Hyundai i20 / Tata Nexon" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service_type">Select Service *</label>
+                            <div class="input-wrapper">
+                                <i data-lucide="settings"></i>
+                                <select id="service_type" name="service_type" required>
+                                    <option value="" disabled selected>Select a service...</option>
+                                    <option value="PPF (Paint Protection Film)">Paint Protection Film (PPF)</option>
+                                    <option value="Ceramic & Graphene Coating">Ceramic & Graphene Coating</option>
+                                    <option value="Custom Car Wrapping">Custom Car Wrapping</option>
+                                    <option value="Premium Auto Detailing">Premium Auto Detailing</option>
+                                    <option value="Performance & Exhausts">Performance & Exhaust Tuning</option>
+                                    <option value="Mechanical Repairs & Diagnostics">Mechanical Service & Diagnostics</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="booking_date">Preferred Date *</label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="calendar-days"></i>
+                                    <input type="date" id="booking_date" name="booking_date" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="time_slot">Preferred Time Slot *</label>
+                                <div class="input-wrapper">
+                                    <i data-lucide="clock"></i>
+                                    <select id="time_slot" name="time_slot" required>
+                                        <option value="" disabled selected>Select slot...</option>
+                                        <option value="Morning (09:00 AM - 01:00 PM)">Morning (09:00 AM - 01:00 PM)</option>
+                                        <option value="Afternoon (01:00 PM - 04:00 PM)">Afternoon (01:00 PM - 04:00 PM)</option>
+                                        <option value="Evening (04:00 PM - 07:00 PM)">Evening (04:00 PM - 07:00 PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Special Requirements / Notes (Optional)</label>
+                            <textarea id="notes" name="notes" placeholder="Any specific issues, engine noises, paint scratches, or timing preferences..." rows="3"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">
+                            <span>Submit Request</span>
+                            <i data-lucide="arrow-right" class="btn-arrow"></i>
+                            <span class="spinner" id="btn-spinner" style="display: none;"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Reviews</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real feedback from vehicle owners who trusted Reincarnation with their prized possessions.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                    </div>
+                    <p class="review-text">"Got my Tata Safari wrapped in Matte Army Green and added ceramic coating. The team is extremely skilled. The alignment of the wrap edges is perfect, and the gloss on the black elements is outstanding. Highly recommended for detailing in Kerala."</p>
+                    <div class="client-info">
+                        <div class="client-meta">
+                            <h4 class="client-name">Devanand R.</h4>
+                            <span class="client-location">Kayamkulam, Kerala</span>
+                        </div>
+                        <span class="car-badge">Tata Safari</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                    </div>
+                    <p class="review-text">"My Hyundai Verna had severe swirl marks and scratches. Took it to Reincarnation for a full 3-stage polish and Graphene Coating. The transformation is jaw-dropping. The paint looks like liquid glass. Meticulous work, worth every rupee."</p>
+                    <div class="client-info">
+                        <div class="client-meta">
+                            <h4 class="client-name">Anjali Krishna</h4>
+                            <span class="client-location">Karunagappally, Kerala</span>
+                        </div>
+                        <span class="car-badge">Hyundai Verna</span>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                    </div>
+                    <p class="review-text">"Excellent diagnostics. I was facing suspension noises in my VW Polo, and another service station advised changing the whole system. The mechanics at Reincarnation diagnosed it as a worn-out bush. Fixed it quickly at a fraction of the cost. Genuine team."</p>
+                    <div class="client-info">
+                        <div class="client-meta">
+                            <h4 class="client-name">Sreejith S.</h4>
+                            <span class="client-location">Kollam, Kerala</span>
+                        </div>
+                        <span class="car-badge">Volkswagen Polo GT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">
+                        <img src="assets/images/logo_monogram_dark.png" alt="RCN Monogram" class="footer-logo-icon">
+                        <img src="assets/images/logo_wordmark.png" alt="Reincarnation Logo" class="footer-logo-wordmark">
+                    </a>
+                    <p class="footer-desc">Reincarnating vehicles to showroom perfection. Premium ceramic coating, self-healing PPF, structural diagnostics, wraps, and mechanical services in Karunagappally, Kerala.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/919895012345" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><i data-lucide="message-square"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="https://maps.app.goo.gl/S7kX5hnrunMcCaXy7" target="_blank" rel="noopener" class="social-link" aria-label="Google Maps"><i data-lucide="map-pin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#booking">Book Appointment</a></li>
+                        <li><a href="#testimonials">Reviews & Ratings</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#services">Paint Protection Film</a></li>
+                        <li><a href="#services">Ceramic 9H Coating</a></li>
+                        <li><a href="#services">Custom Vinyl Wraps</a></li>
+                        <li><a href="#services">Interior & Exterior Detailing</a></li>
+                        <li><a href="#services">Performance ECU Remaps</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i data-lucide="map-pin"></i> Near Kayamkulam Rd, Karunagappally, Kerala 690518</p>
+                    <p><i data-lucide="phone"></i> <a href="tel:+919895012345">+91 98950 12345</a></p>
+                    <p><i data-lucide="mail"></i> <a href="mailto:bookings@reincarnation.in">bookings@reincarnation.in</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Reincarnation Car Workshop. All Rights Reserved. Designed & Optimized for Hostinger Hosting.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Form Success Modal -->
+    <div class="modal-wrapper" id="success-modal">
+        <div class="modal-card">
+            <div class="modal-icon-box">
+                <i data-lucide="badge-check"></i>
+            </div>
+            <h3 class="modal-title">Booking Requested!</h3>
+            <p class="modal-text">Thank you, <strong id="modal-user-name">Client</strong>. Your appointment request for your <strong id="modal-car-model">Car</strong> has been successfully received.</p>
+            
+            <div class="modal-summary">
+                <div class="summary-item">
+                    <span>Service:</span>
+                    <strong id="modal-service">Premium Detailing</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Date:</span>
+                    <strong id="modal-date">01-Jun-2026</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Time Slot:</span>
+                    <strong id="modal-slot">Morning</strong>
+                </div>
+            </div>
+
+            <p class="modal-next-steps">We will call or message you on <strong id="modal-phone">+91 XXXXX XXXXX</strong> within 2 business hours to confirm your scheduling.</p>
+            
+            <button class="btn btn-primary btn-block" id="close-modal-btn">Close Window</button>
+        </div>
+    </div>
+
+    <!-- Script files -->
+    <script src="script.js"></script>
+</body>
+</html>
