@@ -278,4 +278,92 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    /* ==========================================================================
+       7. INTERACTIVE WRAP LAB CONFIGURATOR
+       ========================================================================== */
+    const configuratorSection = document.getElementById('configurator');
+    if (configuratorSection) {
+        const swatchBtns = configuratorSection.querySelectorAll('.swatch-btn');
+        const carImg = configuratorSection.querySelector('#configurator-car');
+        const wrapName = configuratorSection.querySelector('#selected-wrap-name');
+        const wrapDesc = configuratorSection.querySelector('#selected-wrap-desc');
+        const specDuration = configuratorSection.querySelector('#spec-duration');
+        const specDurability = configuratorSection.querySelector('#spec-durability');
+        const specFinish = configuratorSection.querySelector('#spec-finish');
+        const bookBtn = configuratorSection.querySelector('#configurator-book-btn');
+
+        // Target Form Elements to pre-fill
+        const serviceTypeInput = document.getElementById('service_type');
+        const notesInput = document.getElementById('notes');
+
+        let currentActiveColor = 'Championship Red';
+
+        // Add CSS transition programmatically for the spec values that don't have it in CSS
+        const specs = [specDuration, specDurability, specFinish].filter(Boolean);
+        specs.forEach(el => {
+            el.style.transition = 'opacity 0.2s ease';
+        });
+
+        swatchBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Ignore if clicked on the already active swatch
+                if (btn.classList.contains('active')) return;
+
+                // Remove active class from all swatches
+                swatchBtns.forEach(b => b.classList.remove('active'));
+                
+                // Add active class to clicked swatch
+                btn.classList.add('active');
+
+                // Get details from attributes
+                const hue = btn.getAttribute('data-hue');
+                const name = btn.getAttribute('data-name');
+                const desc = btn.getAttribute('data-desc');
+                const duration = btn.getAttribute('data-duration');
+                const durability = btn.getAttribute('data-durability');
+                const finish = btn.getAttribute('data-finish');
+
+                currentActiveColor = name;
+
+                // 1. Shift Car Color using filter
+                if (carImg) {
+                    carImg.style.filter = `hue-rotate(${hue}deg)`;
+                }
+
+                // 2. Fade transition for text elements
+                const texts = [wrapName, wrapDesc, specDuration, specDurability, specFinish].filter(Boolean);
+                
+                texts.forEach(el => {
+                    el.style.opacity = '0';
+                });
+
+                setTimeout(() => {
+                    if (wrapName) wrapName.textContent = name;
+                    if (wrapDesc) wrapDesc.textContent = desc;
+                    if (specDuration) specDuration.textContent = duration;
+                    if (specDurability) specDurability.textContent = durability;
+                    if (specFinish) specFinish.textContent = finish;
+
+                    texts.forEach(el => {
+                        el.style.opacity = '1';
+                    });
+                }, 200);
+            });
+        });
+
+        // Booking Inquiry pre-fill
+        if (bookBtn) {
+            bookBtn.addEventListener('click', () => {
+                // If serviceTypeInput exists, select Custom Car Wrapping
+                if (serviceTypeInput) {
+                    serviceTypeInput.value = 'Custom Car Wrapping';
+                }
+                
+                // Pre-fill notes field
+                if (notesInput) {
+                    notesInput.value = `Hi Reincarnation, I configured a custom wrap in your Wrap Lab. I am interested in the "${currentActiveColor}" wrap option. Please verify availability and estimate pricing for my vehicle.`;
+                }
+            });
+        }
+    }
 });

@@ -209,6 +209,78 @@
                     <a href="#booking" class="service-link"><span>Book Repair</span> <i data-lucide="arrow-right"></i></a>
                 </div>
             </div>
+    </section>
+
+    <!-- Interactive Wrap Lab Section -->
+    <section class="configurator-section" id="configurator">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Custom Configurator</span>
+                <h2 class="section-title">Interactive Wrap Lab</h2>
+                <p class="section-subtitle">Select a premium color below to customize your vehicle wrap in real-time. Experience showroom-level aesthetic planning before booking.</p>
+            </div>
+
+            <div class="configurator-grid">
+                <!-- Left: Visual Customizer -->
+                <div class="configurator-visual-container">
+                    <div class="configurator-card-glow"></div>
+                    <div class="configurator-visual-wrapper">
+                        <!-- High-tech Grid overlay -->
+                        <div class="configurator-grid-overlay"></div>
+                        <!-- Color-shifting Car Image -->
+                        <img src="assets/images/config_car.png" alt="Reincarnation Wrap Configurator BMW 320d" class="configurator-car-img" id="configurator-car">
+                    </div>
+                </div>
+
+                <!-- Right: Selection & Specs -->
+                <div class="configurator-controls">
+                    <div class="spec-panel">
+                        <span class="spec-tag">Selected Wrap Finish</span>
+                        <h3 class="spec-name" id="selected-wrap-name">Championship Red</h3>
+                        <p class="spec-desc" id="selected-wrap-desc">A deep, highly reflective gloss finish that delivers absolute racing DNA. Made from premium dual-cast wrapping film with self-healing properties.</p>
+                        
+                        <div class="spec-stats">
+                            <div class="spec-stat-card">
+                                <span class="stat-meta">Est. Duration</span>
+                                <strong id="spec-duration">3 - 4 Days</strong>
+                            </div>
+                            <div class="spec-stat-card">
+                                <span class="stat-meta">Durability</span>
+                                <strong id="spec-durability">5+ Years</strong>
+                            </div>
+                            <div class="spec-stat-card">
+                                <span class="stat-meta">Finish Type</span>
+                                <strong id="spec-finish">High Gloss</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swatches Selection -->
+                    <div class="swatches-panel">
+                        <h4>Choose Wrap Color</h4>
+                        <div class="swatches-grid">
+                            <!-- Swatch 1: Red -->
+                            <button class="swatch-btn active" data-color="red" data-hue="0" data-name="Championship Red" data-desc="A deep, highly reflective gloss finish that delivers absolute racing DNA. Made from premium dual-cast wrapping film with self-healing properties." data-duration="3 - 4 Days" data-durability="5+ Years" data-finish="High Gloss" aria-label="Championship Red" style="background-color: #d1121b;"></button>
+                            <!-- Swatch 2: Gold/Yellow -->
+                            <button class="swatch-btn" data-color="gold" data-hue="40" data-name="Liquid Satin Gold" data-desc="An opulent, satin-metallic gold finish that captures lights dramatically on BMW 3 Series lines. Features hydrophobic paint protection." data-duration="4 - 5 Days" data-durability="6 Years" data-finish="Satin Metallic" aria-label="Liquid Satin Gold" style="background-color: #d4af37;"></button>
+                            <!-- Swatch 3: Green -->
+                            <button class="swatch-btn" data-color="green" data-hue="120" data-name="Matte Forest Green" data-desc="A tactical, understated matte deep green finish. Perfect for premium sedans looking for a rugged, stealthy presence." data-duration="3 - 4 Days" data-durability="5 Years" data-finish="Ultra Matte" aria-label="Matte Forest Green" style="background-color: #1e3f20;"></button>
+                            <!-- Swatch 4: Blue -->
+                            <button class="swatch-btn" data-color="blue" data-hue="220" data-name="Daytona Gloss Blue" data-desc="A vibrant blue metallic shade inspired by Daytona racing tracks. Features a super-glossy top coat mirroring ceramic coating." data-duration="3 - 4 Days" data-durability="5+ Years" data-finish="Gloss Metallic" aria-label="Daytona Gloss Blue" style="background-color: #0b3c5d;"></button>
+                            <!-- Swatch 5: Purple -->
+                            <button class="swatch-btn" data-color="purple" data-hue="280" data-name="Midnight Royal Purple" data-desc="A luxurious deep violet shade with fine gold and silver metallic flakes that shimmer under direct sun or studio lighting." data-duration="4 - 5 Days" data-durability="6+ Years" data-finish="Shatter Metallic" aria-label="Midnight Royal Purple" style="background-color: #4b0082;"></button>
+                        </div>
+                    </div>
+
+                    <!-- Configurator CTA -->
+                    <div class="configurator-actions">
+                        <a href="#booking" class="btn btn-primary btn-block" id="configurator-book-btn">
+                            <span>Inquire About This Wrap</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
