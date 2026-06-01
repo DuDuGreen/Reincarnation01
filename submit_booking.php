@@ -2,7 +2,7 @@
 header('Content-Type: application/json; charset=utf-8');
 
 // Configuration
-$to_email = 'bookings@reincarnation.in'; // Target workshop mailbox
+$to_email = 'giganigachad11@gmail.com'; // Target workshop mailbox
 $subject = 'New Car Workshop Appointment - Reincarnation';
 
 // Validate request method
