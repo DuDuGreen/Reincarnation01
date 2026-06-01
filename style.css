@@ -298,7 +298,7 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 1100;
     background: rgba(7, 7, 9, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
