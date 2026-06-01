@@ -316,7 +316,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.classList.add('active');
 
                 // Get details from attributes
-                const hue = btn.getAttribute('data-hue');
+                const filter = btn.getAttribute('data-filter');
+                const glow = btn.getAttribute('data-glow');
                 const name = btn.getAttribute('data-name');
                 const desc = btn.getAttribute('data-desc');
                 const duration = btn.getAttribute('data-duration');
@@ -327,7 +328,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // 1. Shift Car Color using filter
                 if (carImg) {
-                    carImg.style.filter = `hue-rotate(${hue}deg)`;
+                    carImg.style.filter = filter;
+                }
+
+                // Update Backdrop Glow color dynamically
+                const glowEl = document.getElementById('car-glow');
+                if (glowEl && glow) {
+                    glowEl.style.background = `radial-gradient(circle, ${glow} 0%, transparent 70%)`;
                 }
 
                 // 2. Fade transition for text elements

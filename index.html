@@ -227,8 +227,10 @@
                     <div class="configurator-visual-wrapper">
                         <!-- High-tech Grid overlay -->
                         <div class="configurator-grid-overlay"></div>
+                        <!-- Backdrop Glow for visual pop -->
+                        <div class="car-backdrop-glow" id="car-glow" style="background: radial-gradient(circle, rgba(209, 18, 27, 0.45) 0%, transparent 70%);"></div>
                         <!-- Color-shifting Car Image -->
-                        <img src="assets/images/config_car.png?v=2" alt="Reincarnation Wrap Configurator BMW 320d" class="configurator-car-img" id="configurator-car">
+                        <img src="assets/images/config_car.png?v=5" alt="Reincarnation Wrap Configurator BMW 320d" class="configurator-car-img" id="configurator-car">
                     </div>
                 </div>
 
@@ -260,15 +262,17 @@
                         <h4>Choose Wrap Color</h4>
                         <div class="swatches-grid">
                             <!-- Swatch 1: Red -->
-                            <button class="swatch-btn active" data-color="red" data-hue="0" data-name="Championship Red" data-desc="A deep, highly reflective gloss finish that delivers absolute racing DNA. Made from premium dual-cast wrapping film with self-healing properties." data-duration="3 - 4 Days" data-durability="5+ Years" data-finish="High Gloss" aria-label="Championship Red" style="background-color: #d1121b;"></button>
+                            <button class="swatch-btn active" data-color="red" data-filter="hue-rotate(0deg) saturate(1.2) brightness(1.2)" data-glow="rgba(209, 18, 27, 0.45)" data-name="Championship Red" data-desc="A deep, highly reflective gloss finish that delivers absolute racing DNA. Made from premium dual-cast wrapping film with self-healing properties." data-duration="3 - 4 Days" data-durability="5+ Years" data-finish="High Gloss" aria-label="Championship Red" style="background-color: #d1121b;"></button>
                             <!-- Swatch 2: Gold/Yellow -->
-                            <button class="swatch-btn" data-color="gold" data-hue="40" data-name="Liquid Satin Gold" data-desc="An opulent, satin-metallic gold finish that captures lights dramatically on BMW 3 Series lines. Features hydrophobic paint protection." data-duration="4 - 5 Days" data-durability="6 Years" data-finish="Satin Metallic" aria-label="Liquid Satin Gold" style="background-color: #d4af37;"></button>
+                            <button class="swatch-btn" data-color="gold" data-filter="hue-rotate(40deg) saturate(1.3) brightness(1.1)" data-glow="rgba(212, 175, 55, 0.45)" data-name="Liquid Satin Gold" data-desc="An opulent, satin-metallic gold finish that captures lights dramatically on BMW 3 Series lines. Features hydrophobic paint protection." data-duration="4 - 5 Days" data-durability="6 Years" data-finish="Satin Metallic" aria-label="Liquid Satin Gold" style="background-color: #d4af37;"></button>
                             <!-- Swatch 3: Green -->
-                            <button class="swatch-btn" data-color="green" data-hue="120" data-name="Matte Forest Green" data-desc="A tactical, understated matte deep green finish. Perfect for premium sedans looking for a rugged, stealthy presence." data-duration="3 - 4 Days" data-durability="5 Years" data-finish="Ultra Matte" aria-label="Matte Forest Green" style="background-color: #1e3f20;"></button>
+                            <button class="swatch-btn" data-color="green" data-filter="hue-rotate(120deg) saturate(1.1) brightness(1.0)" data-glow="rgba(74, 222, 128, 0.5)" data-name="Matte Forest Green" data-desc="A tactical, understated matte deep green finish. Perfect for premium sedans looking for a rugged, stealthy presence." data-duration="3 - 4 Days" data-durability="5 Years" data-finish="Ultra Matte" aria-label="Matte Forest Green" style="background-color: #1e3f20;"></button>
                             <!-- Swatch 4: Blue -->
-                            <button class="swatch-btn" data-color="blue" data-hue="220" data-name="Daytona Gloss Blue" data-desc="A vibrant blue metallic shade inspired by Daytona racing tracks. Features a super-glossy top coat mirroring ceramic coating." data-duration="3 - 4 Days" data-durability="5+ Years" data-finish="Gloss Metallic" aria-label="Daytona Gloss Blue" style="background-color: #0b3c5d;"></button>
+                            <button class="swatch-btn" data-color="blue" data-filter="hue-rotate(220deg) saturate(1.3) brightness(1.15)" data-glow="rgba(0, 123, 255, 0.55)" data-name="Daytona Gloss Blue" data-desc="A vibrant blue metallic shade inspired by Daytona racing tracks. Features a super-glossy top coat mirroring ceramic coating." data-duration="3 - 4 Days" data-durability="5+ Years" data-finish="Gloss Metallic" aria-label="Daytona Gloss Blue" style="background-color: #0b3c5d;"></button>
                             <!-- Swatch 5: Purple -->
-                            <button class="swatch-btn" data-color="purple" data-hue="280" data-name="Midnight Royal Purple" data-desc="A luxurious deep violet shade with fine gold and silver metallic flakes that shimmer under direct sun or studio lighting." data-duration="4 - 5 Days" data-durability="6+ Years" data-finish="Shatter Metallic" aria-label="Midnight Royal Purple" style="background-color: #4b0082;"></button>
+                            <button class="swatch-btn" data-color="purple" data-filter="hue-rotate(280deg) saturate(1.2) brightness(1.1)" data-glow="rgba(168, 85, 247, 0.55)" data-name="Midnight Royal Purple" data-desc="A luxurious deep violet shade with fine gold and silver metallic flakes that shimmer under direct sun or studio lighting." data-duration="4 - 5 Days" data-durability="6+ Years" data-finish="Shatter Metallic" aria-label="Midnight Royal Purple" style="background-color: #4b0082;"></button>
+                            <!-- Swatch 6: Black -->
+                            <button class="swatch-btn" data-color="black" data-filter="grayscale(1) brightness(0.7) contrast(2.2)" data-glow="rgba(255, 255, 255, 0.25)" data-name="Stealth Satin Black" data-desc="A menacing matte/satin black finish that completely transforms the BMW 320d into a stealth fighter. Features ultra-durable self-healing technology and premium paint protection." data-duration="4 - 5 Days" data-durability="7 Years" data-finish="Satin Matte" aria-label="Stealth Satin Black" style="background-color: #111113;"></button>
                         </div>
                     </div>
 
